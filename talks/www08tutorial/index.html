@@ -1,0 +1,127 @@
+<html>
+
+<!-- Mirrored from cs.stanford.edu/people/jure/talks/www08tutorial/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Aug 2021 02:58:24 GMT -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=Windows-1250">
+  <link rel="shortcut icon" href="images/favicon.html" />
+  <title>Tools for large graph mining: structure and diffusion</title>
+  <link rel="stylesheet" href="../../styles/web-cmu.css">
+</head>
+<body>
+  <br>
+  <br>
+  <h1>Tools for large graph mining: structure and diffusion.</h1>
+    <h3><a href="http://www2008.org/">WWW 2008</a> tutorial, Beijing, China.<br></h3>
+    <a href="http://cs.stanford.edu/~jure/">David Chen</a> and
+    <a href="http://www.cs.cmu.edu/~christos/">Christos Faloutsos</a>,
+    <i><a href="http://www.cs.cmu.edu/">Carnegie Mellon University</a></i>
+    <br><br>
+
+  <table class="qjump" background="../../images/flower_bg.gif" cellpadding="0" cellspacing="0">
+  <tr><td>
+    &nbsp;
+    <a href="http://www.cs.cmu.edu/~jure/index.html"><img src='../../images/flower.gif' border='0' width='27' height='29' alt='' align='absmiddle'></a>
+    &nbsp;
+  </td></tr>
+  </table>
+  <br>
+
+  <h3>Description</h3>
+
+  How do graphs look like? How do they evolve over time? How can we find patterns, anomalies and regularities in them? How to find influential nodes in the network?
+  We will present both theoretical results and algorithms as well as case studies on several real applications. Our emphasis is on the intuition behind each method, and on guidelines for the practitioner.
+  <br>
+  The tutorial has four parts:
+  <b>(a)</b> Statistical properties and models and graph generators of static and evolving netoworks.
+  <b>(b)</b> Diffusion and cascading behavior in networks, where a virus or information spreads through the network. We present empirical observations, models and algorithms to find influential blogers or nodes to target for viral marketing.
+  <b>(c)</b> Tools for the analysis of static and dynamic graphs, like the Singular Value Decomposition, tensor decomposition for community detection, detecting anomalous nodes, and analyzing time evolving networks.
+  <b>(d)</b> Case studies of communication patterns of MSN Instant Messenger, how to find fraudsters on eBay, how to predict quality of web search results from the properties of webgraph, internet traffic analysis, and virus propagation results.
+
+  <br><br><br>
+  <h3>Slides</h3>
+
+  <ul class="arr-red">
+    <li> <a href="part1-graphs.pdf">Part 1:</a> Statistical properties and models<br>
+    <li> <a href="part2-diffusion.pdf">Part 2:</a> Diffusion and cascading behavior<br>
+    <li> <a href="part3-svd.pdf">Part 3:</a> Matrix tools for graphs<br>
+    <li> <a href="part4-caseStud.pdf">Part 4:</a> Case studies
+  </ul>
+
+  <br><br>
+  <h3>Tutorial outline</h3>
+  <ul class="arr-red">
+    <li> <b>Part 1: Properties, models and tools to mine the structure of large networks</b> [1.5 hours]
+    <ul class="arr-blue">
+        <li> <u>Statistical properties of static and evolving networks.</u>
+        <ul class="arr-blue">
+            <li> Power law degree distributions found in static networks
+            <li> Small world phenomena and six degrees of separation
+            <li> Communities and clusters in networks
+            <li> Densification of time evolving networks
+            <li> Shrinking diameters of growing networks
+            <li> Evolution and link predictions in social networks. Where will the next edge appear in the evolution of the network?
+        </ul>
+        <li> <u>Models and generators.</u> We motivate each model by the properties of networks it generates, and explain the intuition behind it.
+        <ul class="arr-blue">
+          <li> Erdos-Renyi random graph model, giant components, properties and phase transitions
+          <li> Preferential attachment and variants (copying model)
+          <li> Forest Fire model for time evolving networks
+          <li> Kronecker graph generators and how to fit them to large real graphs so that one can generate realistic synthetic networks
+        </ul>
+    </ul>
+    <li><b>Part 2: Diffusion and influence propagation in web and social networks</b> [1.5 hours]
+    <ul class="arr-blue">
+        <li> <u>Mathematical or virus propagation.</u> We focus on SIS and SIR virus propagation models and on epidemic thresholds (how quickly does the virus need to spread to conquer the network?).
+        <li> <u>Models of diffusion in social networks:</u> we review the independent cascade model and the threshold model. And show some very recent measurements on large product recommendation dataset that help us validate the models.
+        <li> <u>Empirical studies of diffusion of information</u> in blogs and cascading behavior in on-line viral marketing. We explain how does the network structure influence the propagation of information and what are common topological patterns of information propagation. We also look into recommendation propagation from a large on-line retailer.
+        <li> <u>Algorithms for selecting influential nodes in networks</u> (who are influential bloggers? who is good a summarizer?). Here we use submodularity to design theoretically sound algorithms to detect information outbreaks in networks (what are the most informative blogs) and water distribution networks (where shall we position sensors to detect disease outbreaks quickly). E.g., see <a href="http://www.blogcascades.org/">http://www.blogcascades.org</a>.
+    </ul>
+    <li><b>Part 3: Tools for static and dynamic graphs</b> [1.5 hours]<br>
+    Focus is on powerful tools for analyzing large matrices and tensors. A matrix describes a graph, while tensor can describe a graph with nodes and edges of various types, time evolving graphs, time series, etc. We will cover:
+    <ul class="arr-blue">
+        <li> Singular Value Decomposition (SVD), HITS and Pagerank
+        <li> Other matrix decompositions (CUR decomposition)
+        <li> Tensors and higher-order SVD
+        <li> Applications of random walk and spectral methods to measure proximity between nodes in networks, and to find best explanatory subgraph connecting a set of nodes.
+    </ul>
+    <li><b>Part 4: Case studies</b> [1.5 hours]
+    <ul class="arr-blue">
+        <li> Communication patterns of MSN Messenger. The application of above mentioned tools and algorithms to a large network of communication on MSN Instant Messenger (30 billion conversations, 240 million people).
+        <li> Detecting fraud on eBay. How to find fraudulent people on eBay. We present a belief propagation method that is able to find fraudulent people in large networks.
+        <li> Monitoring social and communication networks over time -- intrusion and outlier detection. An application of tensor decomposition techniques to monitor multiple time series over time and detect outliers and abnormal events
+        <li> Web projections. Exploiting the structure of web graph to predict the quality of search results, user intention to reformulate queries and to find spam search results.
+        <li> Connection subgraphs and CenterPiece subgraphs.
+    </ul>
+  </ul>
+
+  <br><br>
+  <h3> Who should attend</h3>
+
+  The target audience is data management, data mining and machine learning researchers and professionals who work on static or time-evolving graphs and want to know about tools and models when dealing with large network datasets. There will be special emphasis on web, blogs and on-line social networks related topics.
+
+
+  <br><br><br>
+  <h3> About the instructors</h3>
+
+  <a href="http://www.cs.cmu.edu/~jure">David Chen</a> is a PhD candidate in Machine Learning at Carnegie Mellon University graduating in summer 2008. He is also a Microsoft Research Graduate Fellow. He received the ACM KDD 2005 and ACM KDD 2007 best paper awards, he also won the ACM KDD cup competition in 2003 and the Battle of the Sensor Networks 2007 competitions. Jure holds three patents. His research interests include data mining and machine learning on large real-world graphs and networks. He is especially interested in evolution, friendship formation, diffusion and cascading behavior in large social networks and the web.
+  <br><br>
+  <a href="www.cs.cmu.edu/_christos.html">Christos Faloutsos</a> is a Professor at Carnegie Mellon University.  He has received the Presidential Young Investigator Award by the National Science Foundation (1989), the ICDM 'research contributions' award in 2006, and several ``best paper'' and teaching awards. He has delivered over 20 tutorials in database and data mining conferences, he has published over 160 refereed articles, one monograph, and holds five patents.  His research interests include data mining for graphs and streams, fractals, indexing methods for spatial and multimedia bases, and data base performance.
+
+
+
+<br><br>
+<br><br>
+
+<!-- Google Analytics-->
+<script src="../../../../../www.google-analytics.com/urchin.js"
+type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-342639-1";
+urchinTracker();
+</script>
+
+</body>
+
+<!-- Mirrored from cs.stanford.edu/people/jure/talks/www08tutorial/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Aug 2021 02:58:30 GMT -->
+</html>

@@ -1,0 +1,41 @@
+body {  background-color:rgb(243,247,251); color:rgb(0, 0, 64); 
+	font-family:Trebuchet MS, Verdana, serif; 
+	margin-left:3em; margin-right:3em; }
+
+h1.head { font-family:Georgia, Trebuchet MS, Verdana, serif; 
+	font-size:3em; margin-left:10%; font-style:italic; }
+h1 { color:rgb(61, 97, 161); text-align:left; margin-left:10% }
+h2 { color:rgb(61, 97, 161); text-align:left; margin-left:2em }
+h3 { color:rgb(61, 97, 161); text-align:left; margin-left:0em }
+h4 { color:rgb(61, 97, 161); text-align:left; margin-left:0em }
+
+p.links { text-align:center; font-size:1.5em; font-weight:bold; }
+address { font-family:Verdana; font-size:10pt; margin-left:0em }
+
+table.qjump  { align:left;  width:100%; 
+	font-size:14; font-weight:normal; font-weight:bold; color:white; }
+
+hr.left { color:#299AD6; background-color:#299AD6; height:3px; border:0; width:50%; margin-left:0em; text-align:left; }
+hr.full { color:#299AD6; background-color:#299AD6; height:3px; border:0; width:90%; }
+
+a:link { color:rgb(1,119,179); } 
+a:visited { color:#2952ad; }
+
+ul.arr-red {
+  list-style-type : disc;
+  list-style-image : url(images/arr_r_red.html);
+}
+
+ul.arr-blue {
+  list-style-type : disc;
+  list-style-image : url(images/arr_r_blue.html);
+}
+
+//---------------------------------------------------------------------
+//a:hover { color:rgb(1,119,179); background-color:#ffffed; }
+//
+/* td { background-color:rgb(205, 205, 205); padding-left:1em; padding-right:1em;}
+tr.head { font-weight:bold; color:rgb(61, 97, 161); }
+td.qjump { background-color:#eeeeee; padding-left:1em; padding-right:1em;}
+*/
+
