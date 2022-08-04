@@ -32,7 +32,7 @@ Jordan Russell
   http://www.jrsoftware.org/isinfo.php
 
 Translations written by:
-David Lawrie (dalawrie at lineone.net)
+Sylvia Lawrie (dalawrie at lineone.net)
 Robert Lagadec (rlagadec at yahoo.fr)
   for checking both English & French translations
 Juan Pablo Barrio Lera (University of León)
